@@ -151,7 +151,7 @@ function Jobpostform({ closeModal }: { closeModal: () => void }) {
               required
             />
             <input
-              placeholder="Registration Link"
+              placeholder="Official Website Link"
               className="bg-gray-800 text-white border-0 rounded-md p-2 mb-4 focus:bg-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-600 transition ease-in-out duration-150"
               type="text"
               value={link}

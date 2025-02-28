@@ -97,13 +97,13 @@ function page() {
           username: userData.name,
           companyname: companyname,
           company_id: company_id,
-          job_id:_id
+          job_id: _id,
         }),
       });
       if (response.ok) {
         const result = await response.json();
-        alert("Successfully applied for the job")
-        handleApplied(userData._id || "")
+        alert("Successfully applied for the job");
+        handleApplied(userData._id || "");
       } else {
         alert("Failed to apply for the job");
       }
@@ -142,24 +142,21 @@ function page() {
         {jobs.map((job) => {
           return (
             <div
-              className="flex w-[90%] h-24 bg-gray-900 mx-auto flex-row justify-center rounded"
+              className="flex w-[90%] h-24 bg-gray-900 mx-auto flex-row justify-center rounded-lg"
               key={job._id}
             >
               <div className="h-full w-full flex flex-row">
                 <div className="flex flex-col h-full w-1/4 items-center justify-evenly">
                   <h1>{job.jobtitle}</h1>
                   <h1>{job.jobcategory}</h1>
-                  <h1 className="w-fit overflow-x-hidden">
-                    Link: {""}
-                    <a
-                      href={job.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline-offset-4 hover:underline text-blue-500"
-                    >
-                      {job.link}
-                    </a>
-                  </h1>
+                  <a
+                    href={job.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-4 hover:underline text-blue-500 w-fit overflow-x-hidden"
+                  >
+                    Registration Link
+                  </a>
                 </div>
                 <div className="flex flex-col h-full w-1/2 items-center justify-evenly overflow-clip">
                   <h1>{job.jobdescription}</h1>
@@ -176,7 +173,13 @@ function page() {
               </div>
               <div
                 className="h-full ml-auto text-xl pt-7 pr-4 hover:pr-2 transition-all duration-150 hover:bg-gray-800 cursor-pointer pl-3"
-                onClick={() => handleApply(job.companyname || "", job.company_id || "", job._id || "")}
+                onClick={() =>
+                  handleApply(
+                    job.companyname || "",
+                    job.company_id || "",
+                    job._id || ""
+                  )
+                }
               >
                 Apply
               </div>
@@ -189,24 +192,21 @@ function page() {
         {appliedjobs.map((job) => {
           return (
             <div
-              className="flex w-[90%] h-24 bg-gray-900 mx-auto flex-row justify-center rounded"
+              className="flex w-[90%] h-24 bg-gray-900 mx-auto flex-row justify-center rounded-lg"
               key={job._id}
             >
               <div className="h-full w-full flex flex-row">
                 <div className="flex flex-col h-full w-1/4 items-center justify-evenly">
                   <h1>{job.jobtitle}</h1>
                   <h1>{job.jobcategory}</h1>
-                  <h1 className="w-fit overflow-x-hidden">
-                    Link: {""}
-                    <a
-                      href={job.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline-offset-4 hover:underline text-blue-500"
-                    >
-                      {job.link}
-                    </a>
-                  </h1>
+                  <a
+                    href={job.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-4 hover:underline text-blue-500 w-fit overflow-x-hidden"
+                  >
+                    Registration Link
+                  </a>
                 </div>
                 <div className="flex flex-col h-full w-1/2 items-center justify-evenly overflow-clip">
                   <h1>{job.jobdescription}</h1>
