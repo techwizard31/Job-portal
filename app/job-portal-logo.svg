@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E073F" />
+      <stop offset="50%" stop-color="#000B58" />
+      <stop offset="100%" stop-color="#AA60C8" />
+    </linearGradient>
+    <linearGradient id="briefcaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AA60C8" />
+      <stop offset="100%" stop-color="#2E073F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base circle with gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#backgroundGradient)" />
+  
+  <!-- Briefcase outline -->
+  <path d="M140,80 H130 V65 C130,58.373 124.627,53 118,53 H82 C75.373,53 70,58.373 70,65 V80 H60 C53.373,80 48,85.373 48,92 V135 C48,141.627 53.373,147 60,147 H140 C146.627,147 152,141.627 152,135 V92 C152,85.373 146.627,80 140,80 Z" fill="url(#briefcaseGradient)" />
+  
+  <!-- Briefcase handle -->
+  <path d="M85,80 V65 C85,66.657 86.343,68 88,68 H112 C113.657,68 115,66.657 115,65 V80" stroke="white" stroke-width="6" fill="none" />
+  
+  <!-- Connection lines symbolizing network/connection -->
+  <path d="M65,105 L85,105 M115,105 L135,105 M100,105 L100,125" stroke="white" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- People silhouettes (abstract) -->
+  <circle cx="75" cy="125" r="8" fill="white" />
+  <circle cx="100" cy="135" r="8" fill="white" />
+  <circle cx="125" cy="125" r="8" fill="white" />
+</svg>

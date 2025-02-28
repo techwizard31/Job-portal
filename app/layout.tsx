@@ -23,6 +23,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jobify",
   description: "Connecting talent with opportunities for a smarter, faster job search.",
+  icons:{
+    icon: "/job-portal-logo.svg"
+  }
 };
 
 export default function RootLayout({ 
