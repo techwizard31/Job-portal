@@ -8,4 +8,10 @@
 @theme {
  --color-background: #FF0000;
  --font-oxanium: "Oxanium", sans-serif;
+ --animate-gradient:'gradientMove 1s ease infinite';
+ @keyframes gradientMove{
+    '0%': { backgroundPosition: '0% 50%' },
+    '50%': { backgroundPosition: '100% 50%' },
+    '100%': { backgroundPosition: '0% 50%' }
+ }
 }

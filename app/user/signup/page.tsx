@@ -42,9 +42,9 @@ function page() {
     }
   };
   return (
-    <div className="w-full h-screen bg-black font-oxanium">
+    <div className="w-full h-screen bg-gradient-to-r from-[#2E073F] via-[#000B58] to-[#2E073F] font-oxanium">
       <div className="flex flex-col items-center justify-center h-screen dark">
-        <div className="w-full max-w-md bg-black rounded-lg shadow-md p-6 border-2 border-white">
+        <div className="w-full max-w-md bg-black rounded-lg shadow-md p-6 border-2 border-bg-gradient-to-r from-[#2E073F] via-[#000B58] to-[#2E073F]">
           <h2 className="text-3xl font-semibold text-white mb-4 text-center font-oxanium">
             Sign Up
           </h2>

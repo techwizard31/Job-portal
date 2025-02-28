@@ -126,7 +126,7 @@ function page() {
   }, []);
 
   return (
-    <div className="w-full h-screen m-0 p-0 flex flex-col font-oxanium text-white bg-black">
+    <div className="w-full h-screen m-0 p-0 flex flex-col font-oxanium text-white bg-gradient-to-r from-[#2E073F] via-[#000B58] to-[#2E073F]">
       <div className="flex flex-row h-20 p-4 w-full justify-around items-center">
         <h1 className="text-4xl font-bold">{userData.name}</h1>
         <h1 className="flex flex-col">
