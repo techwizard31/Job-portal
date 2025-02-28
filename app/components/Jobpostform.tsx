@@ -75,7 +75,7 @@ function Jobpostform({ closeModal }: { closeModal: () => void }) {
   };
 
   return (
-    <div className="flex w-full h-screen bg-black flex-col z-10 absolute">
+    <div className="flex w-full h-screen bg-black flex-col z-10 absolute font-oxanium">
       <div
         className="mr-auto rotate-45 ml-4 mt-4 text-4xl cursor-pointer"
         onClick={closeModal}

@@ -8,16 +8,4 @@
 @theme {
  --color-background: #FF0000;
  --font-oxanium: "Oxanium", sans-serif;
-
 }
-
-/* @layer base {
-  * {
-    @apply border-border outline-ring/50;
-
- }
-  body {
-    @apply bg-background text-foreground;
-
- }
-} */

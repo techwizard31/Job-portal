@@ -39,7 +39,7 @@ function page() {
   };
 
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full h-screen bg-black font-oxanium">
       <div className="flex flex-col items-center justify-center h-screen dark">
         <div className="w-full max-w-md bg-black rounded-lg shadow-md p-6 border-2 border-white">
           <h2 className="text-3xl font-semibold text-white mb-4 text-center font-oxanium">
