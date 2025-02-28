@@ -15,7 +15,8 @@ export async function POST(request: Request) {
       }
   
       // If the user doesn't exist, create a new one
-      const hashedPassword = await bcrypt.hash(password, 10);
+      const salt = await bcrypt.genSalt(10)
+      const hashedPassword = await bcrypt.hash(password, salt);
 
       const comapany = await Company.create({ name: name, email:email,password: hashedPassword,phonenumber:phonenumber,info:info });
       const token = createToken(comapany._id);

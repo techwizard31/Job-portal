@@ -34,6 +34,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  linkedin: {
+    type: String,
+    required: true,
+  },
 });
 
 const User = mongoose.models.User || mongoose.model("User", userSchema);
@@ -44,7 +48,7 @@ const companySchema = new Schema({
     required: true,
   },
   phonenumber: {
-    type: Number,
+    type: String,
     required: true,
     unique: true,
   },
@@ -65,44 +69,48 @@ const companySchema = new Schema({
 const Company =
   mongoose.models.Company || mongoose.model("Company", companySchema);
 
-const jobSchema = new Schema({
-  companyname: {
-    type: String,
-    required: true,
+const jobSchema = new Schema(
+  {
+    companyname: {
+      type: String,
+      required: true,
+    },
+    company_id: {
+      type: String,
+      required: true,
+    },
+    jobcategory: {
+      type: String,
+      required: true,
+    },
+    jobtitle: {
+      type: String,
+      required: true,
+    },
+    jobdescription: {
+      type: String,
+      required: true,
+    },
+    experience: {
+      type: String,
+      required: true,
+    },
+    salary: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+    lastdate: {
+      type: Date,
+      required: true,
+    },
   },
-  company_id: {
-    type: String,
-    required: true,
-  },
-  jobcategory: {
-    type: String,
-    required: true,
-  },
-  jobtitle: {
-    type: String,
-    required: true,
-  },
-  jobdescription: {
-    type: String,
-    required: true,
-  },
-  experience: {
-    type: String,
-    required: true,
-  },
-  salary: {
-    type: String,
-    required: true,
-  },
-  link: {
-    type: String,
-    required: true,
-  },
-  lastdate:{
-    type: Date,
-    required: true
-  }
-});
+  { timestamps: true }
+);
+
 
 const Job = mongoose.models.Job || mongoose.model("Job", jobSchema);
 
@@ -111,7 +119,7 @@ const applySchema = new Schema({
     type: String,
     required: true,
   },
-  username:{
+  username: {
     type: String,
     required: true
   },

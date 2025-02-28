@@ -11,8 +11,8 @@ export async function POST(request: Request) {
       // Check if the user exists
       const exists = await User.findOne({ email: email });
       if (exists) {
-        const hashedPassword = await bcrypt.hash(password, 10);
-        if(exists.password = hashedPassword){
+        const match = await bcrypt.compare(password, exists.password);
+        if(match){
             const token = createToken(exists._id);
             return NextResponse.json({ exists, token }, { status: 200 });  
         }else{
